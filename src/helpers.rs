@@ -9,8 +9,10 @@ pub fn absolute_difference(vec1: Vec<i32>, vec2: Vec<i32>) -> Vec<i32> {
         panic!("different length are not ok"); 
     }
 
-    let mut vector = Vec::with_capacity(vec1.len()); 
 
+
+    let mut vector = Vec::with_capacity(vec1.len()); 
+    
     for (num1, num2) in vec1.iter().zip(vec2.iter()) {
 
         vector.push((num1 - num2).abs())

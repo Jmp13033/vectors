@@ -1,4 +1,6 @@
-mod helpers; 
+mod helpers;
+mod more_helpers; 
+use more_helpers::{zipped_array}; 
 use helpers::{filter_even_numbers, find_shortest_string, find_max, find_unique_elements, filter_strings_by_length, find_common_elements, multiply_vectors, absolute_difference};
 
 
@@ -56,13 +58,20 @@ fn main() {
     let vector2 = vec![9,9,7,6,5];
     let vector3 = vec![9,8,0,7,4]; 
     let vector4 = vec![9,9,7,6,5]; 
+    let vector5 = vec![9, 8, 7]; 
+    let stringed_array: Vec<_> =  ["pig", "cow", "sheep"].iter().map(|&x| x.to_string()).collect(); 
 
+    
     let multiply = multiply_vectors(vector1, vector2); 
     let abs_diff = absolute_difference(vector3, vector4); 
+    
+    let zipped_arrays = zipped_array(vector5, stringed_array); 
 
     println!("{:?}", multiply); 
-
     println!("{:?}", abs_diff); 
+    println!("{:?}", zipped_arrays); 
+
+
 
 
     
