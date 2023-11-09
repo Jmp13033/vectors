@@ -1,75 +1,5 @@
-pub fn adding_evens(vector: Vec<i32>) -> i32 {
-
-    let mut sum = 0; 
-
-    for i in vector {
-
-        if i % 2 == 0 {
-
-            sum += i; 
-
-
-        }
-    
-
-
-    }
-    sum 
-
-}
-
-pub fn find_max(vector: Vec<i32>) -> i32 {
-    
-    let mut max = vector[0]; 
-
-    for num in vector {
-
-        if max < num {
-
-            max = num
-        }
-
-
-    }
-
-    max
-
-}
-
-
-fn find_shortest_string(strings: Vec<String>) -> String  {
-
-    if strings.is_empty() {
-
-        panic!("There are no strings in this vector "); 
-
-
-
-    }
-
-    let mut shortest = &strings[0]; 
-
-
-
-    for string in &strings {
-
-        if shortest.len() > string.len() {
-
-            shortest = &string; 
-
-
-        }
-        
-
-       
-    }
-
-    shortest.to_string()
-
-
-
-}
-
+mod helpers; 
+use helpers::{filter_even_numbers, find_shortest_string, find_max };
 
 fn main() {
 
@@ -80,7 +10,6 @@ fn main() {
 
     let string_array: Vec<String> = ["Hello", "GoodBye", "See", "Later", "Los"].iter().map(|&x| x.to_string()).collect();
     
-
     let result = find_shortest_string(string_array);
 
     println!("{0}", result);
@@ -91,12 +20,13 @@ fn main() {
 
         println!("{0}, {1}", index, value);
     }
-    
-    
-    
-    
+
+    let my_vec = vec![1, 2, 3, 4];
 
 
+    let filtered = filter_even_numbers(my_vec); 
+
+    println!("{:?}", filtered); 
 
     //let num = adding_evens(numbers);
 
