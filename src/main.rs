@@ -81,6 +81,12 @@ fn main() {
     let vector7: Vec<i32> = vec![];
     let resulter = smallest_element(&vector7).unwrap(); 
 
+    let data = vec![0, 7, 8, 9, 0, 6]; 
+
+    let summed: i32 = data.iter().sum();
+
+    
+
     println!("Result: {}", resulter);
 
 

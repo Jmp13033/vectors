@@ -1,7 +1,5 @@
 use std::error::Error;
 
-
-
 pub fn smallest_element(numbers: &Vec<i32>) -> Result<i32, Box<dyn Error>> {
 
     if numbers.is_empty() {
