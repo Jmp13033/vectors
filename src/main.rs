@@ -1,5 +1,5 @@
 mod helpers; 
-use helpers::{filter_even_numbers, find_shortest_string, find_max, find_unique_elements, filter_strings_by_length, find_common_elements};
+use helpers::{filter_even_numbers, find_shortest_string, find_max, find_unique_elements, filter_strings_by_length, find_common_elements, multiply_vectors, absolute_difference};
 
 
 fn main() {
@@ -51,6 +51,20 @@ fn main() {
 
     println!("{:?}", common_elements); 
     
+
+    let vector1 = vec![9,8,0,7,4]; 
+    let vector2 = vec![9,9,7,6,5];
+    let vector3 = vec![9,8,0,7,4]; 
+    let vector4 = vec![9,9,7,6,5]; 
+
+    let multiply = multiply_vectors(vector1, vector2); 
+    let abs_diff = absolute_difference(vector3, vector4); 
+
+    println!("{:?}", multiply); 
+
+    println!("{:?}", abs_diff); 
+
+
     
 
 
