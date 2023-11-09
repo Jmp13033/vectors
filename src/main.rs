@@ -1,8 +1,8 @@
 mod helpers; 
-use helpers::{filter_even_numbers, find_shortest_string, find_max };
+use helpers::{filter_even_numbers, find_shortest_string, find_max, find_unique_elements, filter_strings_by_length, find_common_elements};
+
 
 fn main() {
-
     let numbers = vec![7,9,8,7,5]; 
     let array_number:  Vec<i32> = numbers.iter().map(|&num| num * 2).collect(); 
     let result = find_max(array_number); 
@@ -28,10 +28,33 @@ fn main() {
 
     println!("{:?}", filtered); 
 
-    //let num = adding_evens(numbers);
+    let arr1 = vec![0,8,7,8,5,4]; 
+    let arr2 = vec![9, 8,5,3,2]; 
+    let elem = find_unique_elements(arr1, arr2);
+    let mut arr3: Vec<_> = vec![];
+    arr3.push("Dinner".to_string());
+    arr3.push("hello".to_string());
+    
+    let filtered_strings = filter_strings_by_length(arr3, 4); 
 
-    //array_number.push(num); 
-    //println!("{:?}", array_number); 
+
+    println!("{:?}", filtered_strings); 
+
+
+
+    println!("{:?}", elem); 
+
+    let vec1 = vec![1, 2, 3, 4, 5];
+    let vec2 = vec![3, 4, 5, 6, 7];
+
+    let common_elements = find_common_elements(vec1, vec2);
+
+    println!("{:?}", common_elements); 
+    
+    
+
+
+
 
 
 
