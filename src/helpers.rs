@@ -2,7 +2,6 @@ use std::collections::HashSet;
 
 
 
-
 pub fn absolute_difference(vec1: Vec<i32>, vec2: Vec<i32>) -> Vec<i32> {
     if vec1.len() != vec2.len() {
 
@@ -12,7 +11,6 @@ pub fn absolute_difference(vec1: Vec<i32>, vec2: Vec<i32>) -> Vec<i32> {
 
 
     let mut vector = Vec::with_capacity(vec1.len()); 
-    
     for (num1, num2) in vec1.iter().zip(vec2.iter()) {
 
         vector.push((num1 - num2).abs())

@@ -1,8 +1,7 @@
 mod helpers;
 mod more_helpers; 
-use more_helpers::{zipped_array}; 
+use more_helpers::{zipped_array, sum_of_squares, smallest_element}; 
 use helpers::{filter_even_numbers, find_shortest_string, find_max, find_unique_elements, filter_strings_by_length, find_common_elements, multiply_vectors, absolute_difference};
-
 
 fn main() {
     let numbers = vec![7,9,8,7,5]; 
@@ -59,6 +58,7 @@ fn main() {
     let vector3 = vec![9,8,0,7,4]; 
     let vector4 = vec![9,9,7,6,5]; 
     let vector5 = vec![9, 8, 7]; 
+    let vector6 = vec![]; 
     let stringed_array: Vec<_> =  ["pig", "cow", "sheep"].iter().map(|&x| x.to_string()).collect(); 
 
     
@@ -69,15 +69,19 @@ fn main() {
 
     println!("{:?}", multiply); 
     println!("{:?}", abs_diff); 
-    println!("{:?}", zipped_arrays); 
+    println!("{:?}", zipped_arrays);
+
+    let resulting = sum_of_squares(vector6).unwrap_or_else(|err| {
+
+        panic!("here is the error:  {}", err); 
+    }); 
+    println!("{}", resulting); 
 
 
+    let vector7: Vec<i32> = vec![];
+    let resulter = smallest_element(&vector7).unwrap(); 
 
-
-    
-
-
-
+    println!("Result: {}", resulter);
 
 
 
